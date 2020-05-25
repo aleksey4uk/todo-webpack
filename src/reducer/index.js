@@ -40,7 +40,7 @@ const reducer = (state=initianalState, action) => {
             }
         
         case 'EDIT-ADD-PANEL-COMPLETE': {
-            if (state.editTempPanelValue.length <= 0) return { ...state}
+            if (state.editTempPanelValue.length <= 0) return { ...state};
 
             const newTask = {
                 id: state.tasks.length+1,
@@ -79,8 +79,8 @@ const reducer = (state=initianalState, action) => {
             }
         }
 
-        case 'EDIT-TASK-COMPELTE': {            
-
+        case 'EDIT-TASK-COMPELTE': {
+            
             let editElem = {
                 text: state.editTask.text,
                 id: state.editTask.id
@@ -105,7 +105,7 @@ const reducer = (state=initianalState, action) => {
                 ...state.tasks[checkTaskId],
                 checked: true,
             }
-            console.log(state.tasks);
+
             return {
                 ...state,
                 tasks: [

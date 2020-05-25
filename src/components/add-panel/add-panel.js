@@ -6,7 +6,6 @@ import { Button } from 'antd';
 import { PlusSquareTwoTone } from '@ant-design/icons';
 
 const AddPanel = (props) => {
-    console.log(props);
     const {editTempPanelValue, editValue, editValueComplete} = props;
     return (
         <div className="add-panel">

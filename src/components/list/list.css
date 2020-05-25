@@ -40,3 +40,7 @@
 .list .list-item .on {
     display: block;
 }
+
+.list .list-item .checked {
+    text-decoration: line-through;
+}
