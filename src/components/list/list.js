@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
 import './list.css';
-import { Checkbox } from 'antd';
 import { connect } from 'react-redux';
-import { List, Typography, Divider, Button, Input } from 'antd';
+import { List, Typography, Button, Input, Checkbox } from 'antd';
 import { DeleteTwoTone, EditTwoTone } from '@ant-design/icons';
 import swapiService from '../../services/swapi-service';
 
@@ -57,6 +56,10 @@ class Lists extends Component {
                             </Typography.Text>
 
                             <div className="btn-group">
+                                <Checkbox 
+                                    onChange={() => checkTask(item.id)}
+                                    style={{paddingRight: "5px"}}>
+                                </Checkbox>
                                 <Button
                                     className="btn-list btn-edit"
                                     onClick={() => editTaskStart(item.id)}>
@@ -101,7 +104,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch({type: 'EDIT-TASK-COMPELTE', payload});
         },
         deleteTask: (payload) => dispatch({type: 'DELETE-TASK', payload}),
-        checkTask: (id) => console.log('Выделяем элемент: ', id),
+        checkTask: (payload) => dispatch({type: 'CHECK-TASK', payload}),
     }
 } 
 

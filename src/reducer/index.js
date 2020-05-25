@@ -99,6 +99,24 @@ const reducer = (state=initianalState, action) => {
             }
         }
 
+        case 'CHECK-TASK': {
+            const checkTaskId = state.tasks.findIndex(item=>item.id===action.payload);
+            const newElem = {
+                ...state.tasks[checkTaskId],
+                checked: true,
+            }
+            console.log(state.tasks);
+            return {
+                ...state,
+                tasks: [
+                    ...state.tasks.slice(0, checkTaskId),
+                    newElem,
+                    ...state.tasks.slice(checkTaskId + 1)
+
+                ]
+            }
+        }
+
         default: return state;
     }
 }
