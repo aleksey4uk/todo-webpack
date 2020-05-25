@@ -1,0 +1,21 @@
+.add-panel {
+    margin-top: 5px;
+}
+
+.add-panel input {
+    width: 88%; 
+    height: 40px;
+    border-radius: 5px;
+}
+
+.add-panel .btns {
+    padding-top: 10px;
+    width: 11% !important;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.add-panel form {
+    display: flex;
+    justify-content: space-between;
+}

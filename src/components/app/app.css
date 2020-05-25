@@ -1,0 +1,18 @@
+.site-card-border-less-wrapper {
+    padding: 30px;
+}
+
+.app {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 560px;
+}
+
+.app .card-app {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}

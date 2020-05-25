@@ -1,0 +1,42 @@
+.list .list-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+.list .list-item .btn-group  {
+    align-self: flex-end;
+}
+
+.list .list-item .btn-group .btn-list {
+    padding: 5px;
+    border: none;
+}
+
+.list .list-item .tpg-text-input {
+    display: none;
+}
+
+.list .list-item .text {
+    display: block;
+}
+
+.list .list-item .li-input {
+    display: none;
+    width: 89%;
+}
+
+.list .list-item input {
+    border: none;
+    font-size: 1.1em;
+}
+
+.list .list-item .off {
+    display: none;
+}
+
+.list .list-item .on {
+    display: block;
+}
