@@ -6,7 +6,6 @@ const initianalState = {
 }
 
 const reducer = (state=initianalState, action) => {
-    console.log(state.tasks)
     switch(action.type) {
         //Загрузка, успешная загрузка
         case 'LOAD':
