@@ -6,6 +6,7 @@ const initianalState = {
 }
 
 const reducer = (state=initianalState, action) => {
+    console.log(state.tasks)
     switch(action.type) {
         //Загрузка, успешная загрузка
         case 'LOAD':
@@ -102,7 +103,7 @@ const reducer = (state=initianalState, action) => {
             const checkTaskId = state.tasks.findIndex(item=>item.id===action.payload);
             const newElem = {
                 ...state.tasks[checkTaskId],
-                checked: true,
+                checked : state.tasks[checkTaskId].checked ? false : true 
             }
 
             return {

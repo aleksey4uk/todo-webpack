@@ -21,14 +21,13 @@ class Lists extends Component {
 
     render() {
         const { editTaskStart, editTaskEdit, deleteTask, checkTask, loading, tasks, editTask, editTaskComplete } = this.props;
-        if (loading || tasks.length <= 0) return <h1>Loading...</h1>
 
+        if (loading || tasks.length <= 0) return <h1>Loading...</h1>
         return (
             <List
                 className="list"
                 dataSource={this.props.tasks}
                 renderItem={(item, i) => {
-
                     let classesText = 'text ';
                     let classesInput = 'li-input ';
 
@@ -36,7 +35,6 @@ class Lists extends Component {
                         classesText += 'off';
                         classesInput += 'on';
                     }
-
                     return (
                         <List.Item className="list-item">
 
@@ -56,7 +54,8 @@ class Lists extends Component {
                             </Typography.Text>
 
                             <div className="btn-group">
-                                <Checkbox 
+                                <Checkbox
+                                    checked={item.checked} 
                                     onChange={() => checkTask(item.id)}
                                     style={{paddingRight: "5px"}}>
                                 </Checkbox>
@@ -81,7 +80,7 @@ const mapStateToProps = (state) => {
     return {
         loading: state.loading,
         tasks: state.tasks,
-        editTask: state.editTask
+        editTask: state.editTask,
     }
 }
 
