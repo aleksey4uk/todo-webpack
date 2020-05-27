@@ -79,15 +79,14 @@ const reducer = (state=initianalState, action) => {
             }
         }
 
-        case 'EDIT-TASK-COMPELTE': {
-            
+        case 'EDIT-TASK-COMPELTE': {        
             let editElem = {
                 text: state.editTask.text,
                 id: state.editTask.id
             }
             const oldElemIdx = state.tasks.findIndex(item => item.id === state.editTask.id);
-
             if(action.payload.length <=0) editElem.text = state.tasks[oldElemIdx].text;
+
             return {
                 ...state,
                 tasks: [
