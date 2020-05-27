@@ -8,6 +8,7 @@ const { Text, Title } = Typography;
 const Header = ({items=0}) => {
     return (
         <div className="header">
+            <Spa/>
             <Title level={4}>Todo App</Title>
             <Text>Всего задач: {items}</Text>
         </div>

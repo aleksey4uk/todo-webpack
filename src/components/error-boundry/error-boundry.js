@@ -5,12 +5,13 @@ export default class ErrorBoundry extends Component {
         error: false
     }
 
-    componentDidCatch() {
-        this.setState({error: true})
+    componentDidCatch(error) {
+        this.setState({error})
+
     }
 
     render() {
-        if (this.state.error) return <h1>Извините, возникла ошибка</h1>
+    if (this.state.error) return <h1>Извините, возникла ошибка >> {this.state.error.message}</h1>
         return this.props.children;
     }
 }
